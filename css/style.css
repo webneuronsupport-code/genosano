@@ -1265,13 +1265,52 @@ footer {
     pointer-events: none;
 }
 
+.section-dark .section-header h2 {
+    color: white;
+}
 
+.section-dark .section-header p {
+    color: rgba(255, 255, 255, 0.7);
+}
 
-.form-wrapper {
-    max-width: 700px;
-    margin: 0 auto;
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
     position: relative;
     z-index: 1;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.c-feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.c-feature i {
+    font-size: 1.8rem;
+    color: var(--color-accent);
+}
+
+.form-wrapper {
+    width: 100%;
 }
 
 .glass-form {

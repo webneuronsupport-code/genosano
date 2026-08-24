@@ -14,7 +14,7 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=27">
+    <link rel="stylesheet" href="css/style.css?v=28">
 </head>
 <body>
     <!-- Navbar -->
@@ -304,35 +304,53 @@
     <!-- Contact Form Section -->
     <section class="section section-dark contact-form-section" id="formulario">
         <div class="container">
-            <div class="section-header">
-                <h2>¿Tienes Dudas? Escríbenos</h2>
-                <p>Déjanos tus datos y nos pondremos en contacto contigo lo antes posible para resolver todas tus preguntas.</p>
-            </div>
-            
-            <div class="form-wrapper">
-                <form class="glass-form" action="#" method="POST" id="contactForm">
-                    <div class="input-group">
-                        <div class="input-field">
-                            <i class='bx bx-user'></i>
-                            <input type="text" id="name" name="name" placeholder="Tu Nombre Completo" required>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                        <h2>¿Tienes Dudas?<br>Escríbenos</h2>
+                        <p>Déjanos tus datos y nos pondremos en contacto contigo lo antes posible para resolver todas tus preguntas.</p>
+                    </div>
+                    <div class="contact-features">
+                        <div class="c-feature">
+                            <i class='bx bx-check-circle'></i>
+                            <span>Atención Personalizada</span>
+                        </div>
+                        <div class="c-feature">
+                            <i class='bx bx-check-circle'></i>
+                            <span>Respuesta Rápida</span>
+                        </div>
+                        <div class="c-feature">
+                            <i class='bx bx-check-circle'></i>
+                            <span>Valoración Inicial</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-wrapper">
+                    <form class="glass-form" action="#" method="POST" id="contactForm">
+                        <div class="input-group">
+                            <div class="input-field">
+                                <i class='bx bx-user'></i>
+                                <input type="text" id="name" name="name" placeholder="Tu Nombre Completo" required>
+                            </div>
+                            <div class="input-field">
+                                <i class='bx bx-phone'></i>
+                                <input type="tel" id="phone" name="phone" placeholder="Número de Teléfono" required>
+                            </div>
                         </div>
                         <div class="input-field">
-                            <i class='bx bx-phone'></i>
-                            <input type="tel" id="phone" name="phone" placeholder="Número de Teléfono" required>
+                            <i class='bx bx-envelope'></i>
+                            <input type="email" id="email" name="email" placeholder="Correo Electrónico (Opcional)">
                         </div>
-                    </div>
-                    <div class="input-field">
-                        <i class='bx bx-envelope'></i>
-                        <input type="email" id="email" name="email" placeholder="Correo Electrónico (Opcional)">
-                    </div>
-                    <div class="input-field">
-                        <i class='bx bx-message-square-detail'></i>
-                        <textarea id="message" name="message" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-submit">
-                        Enviar Mensaje <i class='bx bx-send'></i>
-                    </button>
-                </form>
+                        <div class="input-field">
+                            <i class='bx bx-message-square-detail'></i>
+                            <textarea id="message" name="message" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            Enviar Mensaje <i class='bx bx-send'></i>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
