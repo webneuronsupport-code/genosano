@@ -71,4 +71,30 @@ document.addEventListener('DOMContentLoaded', () => {
             slides[currentSlide].classList.add('active');
         }, 5000); // Change image every 5 seconds
     }
+
+    // GSAP Animations
+    if (typeof gsap !== 'undefined') {
+        // Hero elements entrance animation
+        gsap.from(".gsap-hero-el", {
+            y: 40,
+            opacity: 0,
+            duration: 1.2,
+            stagger: 0.15,
+            ease: "power3.out",
+            delay: 0.2
+        });
+
+        // Counters animation
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            gsap.to(counter, {
+                innerHTML: target,
+                duration: 2.5,
+                ease: "power2.out",
+                snap: { innerHTML: 1 },
+                delay: 0.8
+            });
+        });
+    }
 });
