@@ -100,23 +100,5 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Register ScrollTrigger if it exists
-        if (typeof ScrollTrigger !== 'undefined') {
-            gsap.registerPlugin(ScrollTrigger);
-
-            // Staggered entrance for tech cards
-            gsap.from(".tech-item", {
-                scrollTrigger: {
-                    trigger: ".techniques-grid",
-                    start: "top 85%", // Trigger when the top of the grid is 85% down the viewport
-                    toggleActions: "play none none reverse"
-                },
-                y: 50,
-                opacity: 0,
-                duration: 0.8,
-                stagger: 0.1,
-                ease: "back.out(1.2)"
-            });
-        }
     }
 });
