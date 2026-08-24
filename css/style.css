@@ -840,11 +840,11 @@ footer {
 /* Responsive */
 @media (max-width: 992px) {
     .hero-carousel {
-        padding-top: 8rem;
+        padding-top: 6rem;
     }
     
     .hero-carousel .hero-content {
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 
     .hero-carousel h1 {
@@ -913,7 +913,43 @@ footer {
         grid-template-columns: 1fr;
     }
     
+    .hero-carousel {
+        padding-top: 5rem;
+        min-height: 100vh;
+        padding-bottom: 4rem;
+    }
+
     .hero-carousel h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-carousel p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        max-width: 100%;
+        line-height: 1.4;
+    }
+
+    .hero-stats {
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .dark-mode-stats strong {
+        font-size: 1.5rem;
+    }
+
+    .dark-mode-stats span {
+        font-size: 0.85rem;
+    }
+
+    .hero-buttons {
+        gap: 0.5rem;
+    }
+
+    .btn-primary, .btn-outline-light {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
     }
 }
