@@ -110,9 +110,9 @@ document.addEventListener('DOMContentLoaded', () => {
             centeredSlides: true,
             slidesPerView: 'auto',
             coverflowEffect: {
-                rotate: 15,
-                stretch: 0,
-                depth: 200,
+                rotate: 5,
+                stretch: 80,
+                depth: 150,
                 modifier: 1,
                 slideShadows: false,
             },
