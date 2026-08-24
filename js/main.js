@@ -102,48 +102,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    // Initialize Swiper for Treatments
-    if (typeof Swiper !== 'undefined') {
-        new Swiper('.treatments-swiper', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            coverflowEffect: {
-                rotate: 5,
-                stretch: 50,
-                depth: 150,
-                modifier: 1,
-                slideShadows: false,
-            },
-            loopedSlides: 4,
-            breakpoints: {
-                1024: {
-                    coverflowEffect: {
-                        stretch: 120,
-                        depth: 200,
-                        rotate: 0,
-                    }
-                },
-                1440: {
-                    coverflowEffect: {
-                        stretch: 180,
-                        depth: 250,
-                        rotate: 0,
-                    }
-                }
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            loop: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            }
+    // Horizontal Accordion Logic for Treatments
+    const hCards = document.querySelectorAll('.h-card');
+    hCards.forEach(card => {
+        card.addEventListener('click', () => {
+            // Remove active class from all
+            hCards.forEach(c => c.classList.remove('active'));
+            // Add active class to clicked card
+            card.classList.add('active');
         });
-    }
+    });
 
     // Accordion Logic for Contact Locations
     const accordionHeaders = document.querySelectorAll('.accordion-header');

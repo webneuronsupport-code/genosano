@@ -562,54 +562,157 @@ ul {
     100% { transform: translateX(0); }
 }
 
-/* Swiper Treatments Container */
-.treatments-swiper {
-    width: 100%;
-    padding-top: 30px;
-    padding-bottom: 60px;
-}
-
-.treatments-swiper .swiper-slide {
-    width: 320px;
-    height: 420px;
-}
-
-.treatment-card-3d {
-    background: white;
-    border-radius: 24px;
-    padding: 2.5rem 2rem;
-    height: 100%;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+/* Horizontal Accordion Treatments */
+.treatments-accordion {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-top: 5px solid var(--color-accent);
-    transition: transform 0.3s ease;
+    gap: 1rem;
+    width: 100%;
+    height: 500px;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
 
-.treatment-card-3d .card-icon {
-    width: 70px;
-    height: 70px;
-    background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
-    border-radius: 50%;
+.h-card {
+    background-color: var(--card-bg, var(--color-primary));
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    flex: 1;
+    min-width: 80px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.h-card.active {
+    flex: 6;
+    cursor: default;
+}
+
+.h-card-inactive {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 10px 20px rgba(56, 178, 172, 0.3);
+    transition: opacity 0.4s ease;
+    opacity: 1;
+    pointer-events: none;
 }
 
-.treatment-card-3d .card-icon i {
-    font-size: 2.5rem;
-    color: white;
+.h-card.active .h-card-inactive {
+    opacity: 0;
 }
 
-.treatment-card-3d h3 {
-    font-size: 1.25rem;
-    color: var(--color-primary);
-    text-align: center;
-    margin-bottom: 1.5rem;
+.h-card-inactive span {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgba(0,0,0,0.7);
+    white-space: nowrap;
+}
+
+.h-card-active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.4s ease 0.2s;
+    pointer-events: none;
+}
+
+.h-card.active .h-card-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.h-card-title {
+    font-size: 4.5rem;
+    line-height: 1.1;
     font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: -0.03em;
+}
+
+.h-card-content {
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.h-card-content img {
+    width: 280px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.h-card-desc {
+    flex: 1;
+    color: #333;
+}
+
+.h-card-desc p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.h-card-desc ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+
+.h-card-desc li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.h-card-desc i {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+}
+
+/* Responsive Accordion */
+@media (max-width: 1024px) {
+    .treatments-accordion {
+        height: 400px;
+    }
+    .h-card-title { font-size: 3rem; }
+    .h-card-content img { width: 200px; height: 150px; }
+    .h-card.active { flex: 5; }
+    .h-card-active { padding: 2rem; }
+}
+
+@media (max-width: 768px) {
+    .treatments-accordion {
+        flex-direction: column;
+        height: 700px;
+    }
+    .h-card-inactive span {
+        writing-mode: horizontal-tb;
+        transform: none;
+    }
+    .h-card.active { flex: 4; }
+    .h-card-title { font-size: 2.5rem; }
+    .h-card-content { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .h-card-content img { width: 100%; height: 120px; }
+    .h-card-active { padding: 1.5rem; }
 }
 
 .treatment-list {

@@ -14,7 +14,7 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=23">
+    <link rel="stylesheet" href="css/style.css?v=24">
 </head>
 <body>
     <!-- Navbar -->
@@ -126,67 +126,90 @@
             <p>Tratamos una amplia variedad de condiciones para aliviar tu dolor y restaurar tu función física.</p>
         </div>
         
-        <div class="swiper treatments-swiper">
-            <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                    <div class="treatment-card-3d">
-                        <div class="card-icon"><i class='bx bx-body'></i></div>
-                        <h3>Columna y Espalda</h3>
-                        <ul class="treatment-list">
-                            <li><i class='bx bx-pulse'></i> Dolor de espalda</li>
-                            <li><i class='bx bx-pulse'></i> Hernias discales</li>
-                            <li><i class='bx bx-pulse'></i> Escoliosis</li>
-                            <li><i class='bx bx-pulse'></i> Dolor de ciática</li>
-                        </ul>
-                    </div>
+        <div class="treatments-accordion">
+            <!-- Card 1 -->
+            <div class="h-card active" style="--card-bg: #8ba888;">
+                <div class="h-card-inactive">
+                    <span>Columna y Espalda</span>
                 </div>
-                
-                <!-- Slide 2 -->
-                <div class="swiper-slide">
-                    <div class="treatment-card-3d">
-                        <div class="card-icon"><i class='bx bx-run'></i></div>
-                        <h3>Traumatología y Deporte</h3>
-                        <ul class="treatment-list">
-                            <li><i class='bx bx-pulse'></i> Lesiones Deportivas</li>
-                            <li><i class='bx bx-pulse'></i> Esguinces y Fracturas</li>
-                            <li><i class='bx bx-pulse'></i> Tendinitis</li>
-                            <li><i class='bx bx-pulse'></i> Lesiones de rodilla</li>
-                            <li><i class='bx bx-pulse'></i> Túnel del carpo</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Slide 3 -->
-                <div class="swiper-slide">
-                    <div class="treatment-card-3d">
-                        <div class="card-icon"><i class='bx bx-brain'></i></div>
-                        <h3>Neurología</h3>
-                        <ul class="treatment-list">
-                            <li><i class='bx bx-pulse'></i> Parálisis facial</li>
-                            <li><i class='bx bx-pulse'></i> Lesiones medulares</li>
-                            <li><i class='bx bx-pulse'></i> Hemiplejía</li>
-                            <li><i class='bx bx-pulse'></i> Parálisis Cerebral</li>
-                            <li><i class='bx bx-pulse'></i> Neuropatías</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Slide 4 -->
-                <div class="swiper-slide">
-                    <div class="treatment-card-3d">
-                        <div class="card-icon"><i class='bx bx-plus-medical'></i></div>
-                        <h3>Articulaciones y Bienestar</h3>
-                        <ul class="treatment-list">
-                            <li><i class='bx bx-pulse'></i> Artritis</li>
-                            <li><i class='bx bx-pulse'></i> Post cirugía</li>
-                            <li><i class='bx bx-pulse'></i> Masaje descontracturante</li>
-                        </ul>
+                <div class="h-card-active">
+                    <h3 class="h-card-title">Columna<br>y Espalda</h3>
+                    <div class="h-card-content">
+                        <img src="images/treatments/columna.jpg" alt="Columna y Espalda">
+                        <div class="h-card-desc">
+                            <p>Cuidado personalizado para tu bienestar diario.</p>
+                            <ul>
+                                <li><i class='bx bx-check'></i> Dolor de espalda y ciática</li>
+                                <li><i class='bx bx-check'></i> Hernias discales</li>
+                                <li><i class='bx bx-check'></i> Escoliosis</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Swiper Pagination -->
-            <div class="swiper-pagination"></div>
+
+            <!-- Card 2 -->
+            <div class="h-card" style="--card-bg: #e1d5cc;">
+                <div class="h-card-inactive">
+                    <span>Deporte</span>
+                </div>
+                <div class="h-card-active">
+                    <h3 class="h-card-title">Traumatología<br>y Deporte</h3>
+                    <div class="h-card-content">
+                        <img src="images/treatments/deporte.jpg" alt="Traumatología y Deporte">
+                        <div class="h-card-desc">
+                            <p>Recupera tu movilidad y alcanza tu máximo rendimiento.</p>
+                            <ul>
+                                <li><i class='bx bx-check'></i> Lesiones Deportivas</li>
+                                <li><i class='bx bx-check'></i> Esguinces y Fracturas</li>
+                                <li><i class='bx bx-check'></i> Tendinitis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="h-card" style="--card-bg: #b0a39d;">
+                <div class="h-card-inactive">
+                    <span>Neurología</span>
+                </div>
+                <div class="h-card-active">
+                    <h3 class="h-card-title">Atención<br>Neurológica</h3>
+                    <div class="h-card-content">
+                        <img src="images/treatments/neurologia.jpg" alt="Neurología">
+                        <div class="h-card-desc">
+                            <p>Rehabilitación especializada para recuperar tu independencia.</p>
+                            <ul>
+                                <li><i class='bx bx-check'></i> Parálisis facial</li>
+                                <li><i class='bx bx-check'></i> Lesiones medulares</li>
+                                <li><i class='bx bx-check'></i> Hemiplejía</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="h-card" style="--card-bg: #5a8bd4;">
+                <div class="h-card-inactive">
+                    <span>Articulaciones</span>
+                </div>
+                <div class="h-card-active">
+                    <h3 class="h-card-title">Articulaciones<br>y Bienestar</h3>
+                    <div class="h-card-content">
+                        <img src="images/treatments/articulaciones.jpg" alt="Articulaciones">
+                        <div class="h-card-desc">
+                            <p>Alivio del dolor y mejora en tu calidad de vida.</p>
+                            <ul>
+                                <li><i class='bx bx-check'></i> Artritis y Artrosis</li>
+                                <li><i class='bx bx-check'></i> Post cirugía</li>
+                                <li><i class='bx bx-check'></i> Masaje descontracturante</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -306,6 +329,6 @@
     <!-- GSAP for animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="js/main.js?v=12"></script>
+    <script src="js/main.js?v=13"></script>
 </body>
 </html>
