@@ -1265,13 +1265,7 @@ footer {
     pointer-events: none;
 }
 
-.contact-form-section .section-title h2 {
-    color: white;
-}
 
-.contact-form-section .section-title p {
-    color: rgba(255, 255, 255, 0.7);
-}
 
 .form-wrapper {
     max-width: 700px;
