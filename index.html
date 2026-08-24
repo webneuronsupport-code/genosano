@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genosano - Fisioterapia Integral</title>
+    <meta name="description" content="Genosano ofrece servicios de fisioterapia integral, técnicas físicas y tratamientos especializados en la Ciudad de México.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Boxicons for modern icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css?v=14">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="assets/images/logo.png" alt="Genosano Logo" class="navbar-logo">
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#tratamientos">Tratamientos</a>
+                <a href="#contacto">Contacto</a>
+                <a href="#contacto" class="btn-primary nav-btn mobile-only">Agendar Cita</a>
+            </div>
+            <a href="#contacto" class="btn-primary nav-btn desktop-only">Agendar Cita</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero hero-carousel">
+        <div class="carousel-backgrounds" id="hero-carousel">
+            <div class="carousel-slide active" style="background-image: url('assets/images/carousel1.jpg');"></div>
+            <div class="carousel-slide" style="background-image: url('assets/images/carousel2.jpg');"></div>
+            <div class="carousel-slide" style="background-image: url('assets/images/carousel3.jpg');"></div>
+            <div class="carousel-overlay"></div>
+        </div>
+        <div class="hero-content fade-in-up">
+            <div class="badge-top glass-panel-dark"><i class='bx bx-check-shield'></i> Especialistas en Salud Física</div>
+            <h1>Recupera tu movilidad, <br><span class="text-gradient-light">mejora tu vida.</span></h1>
+            <p>Fisioterapia integral y personalizada con los más altos estándares de calidad. Cuidamos de tu salud con profesionales expertos para devolverte tu bienestar.</p>
+            
+            <div class="hero-stats dark-mode-stats">
+                <div class="stat-item">
+                    <strong>+10</strong>
+                    <span>Años de Experiencia</span>
+                </div>
+                <div class="stat-divider bg-light"></div>
+                <div class="stat-item">
+                    <strong>100%</strong>
+                    <span>Atención Personalizada</span>
+                </div>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="#servicios" class="btn-primary shadow-hover">Servicios <i class='bx bx-right-arrow-alt'></i></a>
+                <a href="#contacto" class="btn-outline-light">Contáctanos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Techniques Section -->
+    <section id="servicios" class="section">
+        <div class="section-header">
+            <h2>Técnicas y Agentes Físicos</h2>
+            <p>Contamos con tecnología avanzada y técnicas manuales especializadas para tu pronta recuperación.</p>
+        </div>
+        
+        <div class="services-wrapper">
+            <div class="techniques-grid">
+                <div class="tech-item glass-panel"><i class='bx bx-bolt-circle'></i> <span>Electroterapia</span></div>
+                <div class="tech-item glass-panel"><i class='bx bx-broadcast'></i> <span>Ultrasonido terapéutico</span></div>
+                <div class="tech-item glass-panel"><i class='bx bx-crosshair'></i> <span>Láser terapéutico</span></div>
+                <div class="tech-item glass-panel"><i class='bx bx-band-aid'></i> <span>Kinesiotape</span></div>
+                <div class="tech-item glass-panel"><i class='bx bx-hand'></i> <span>Terapia manual</span></div>
+                <div class="tech-item glass-panel"><i class='bx bxs-hot'></i> <span>Termoterapia</span></div>
+                <div class="tech-item glass-panel"><i class='bx bx-water'></i> <span>Drenaje linfático</span></div>
+                <div class="tech-item glass-panel"><i class='bx bx-target-lock'></i> <span>Punción seca</span></div>
+                <div class="tech-item glass-panel"><i class='bx bx-plus-medical'></i> <span>Electropunsión</span></div>
+                <div class="tech-item glass-panel"><i class='bx bx-spa'></i> <span>Masaje terapéutico</span></div>
+                <div class="tech-item glass-panel"><i class='bx bx-run'></i> <span>Ejercicio personalizado</span></div>
+                <div class="tech-item glass-panel"><i class='bx bx-child'></i> <span>Estimulación temprana</span></div>
+                <div class="tech-item glass-panel"><i class='bx bx-brain'></i> <span>Neurorehabilitación</span></div>
+                <div class="tech-item glass-panel"><i class='bx bx-walk'></i> <span>Revitalización geriátrica</span></div>
+            </div>
+            <div class="side-image glass-panel">
+                <img src="assets/images/therapy.jpg" alt="Terapia Manual">
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatments Section -->
+    <section id="tratamientos" class="section bg-light-alt">
+        <div class="section-header">
+            <h2>Nuestros Tratamientos</h2>
+            <p>Tratamos una amplia variedad de condiciones para aliviar tu dolor y restaurar tu función física.</p>
+        </div>
+        
+        <div class="treatments-container">
+            <div class="treatments-images">
+                <div class="img-wrap glass-panel"><img src="assets/images/rehab.jpg" alt="Rehabilitación y Ejercicio"></div>
+            </div>
+            <div class="treatments-list">
+                <div class="treatments-pills">
+                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Dolor de espalda</div>
+                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Artritis</div>
+                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Hernias discales</div>
+                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Fracturas</div>
+                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Tendinitis</div>
+                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Escoliosis</div>
+                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Parálisis facial</div>
+                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Lesiones medulares</div>
+                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Dolor de ciática</div>
+                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Hemiplejía</div>
+                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Parálisis Cerebral</div>
+                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Síndrome de túnel del carpo</div>
+                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Post cirugía</div>
+                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Masaje descontracturante</div>
+                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Esguinces</div>
+                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Lesiones Deportivas</div>
+                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Neuropatías</div>
+                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Lesiones de rodilla</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Locations -->
+    <section id="contacto" class="section">
+        <div class="section-header">
+            <h2>Consultorios y Horarios</h2>
+            <p>Agenda tu cita. Estamos listos para atenderte.</p>
+        </div>
+        
+        <div class="schedule-box glass-panel text-center">
+            <h3>Horario (Previa Cita)</h3>
+            <div class="schedule-grid">
+                <div class="schedule-item">
+                    <i class='bx bx-calendar-event'></i>
+                    <strong>Lunes a Viernes</strong>
+                    <p>10:00 am - 7:00 pm</p>
+                </div>
+                <div class="schedule-item">
+                    <i class='bx bx-calendar-star'></i>
+                    <strong>Sábado</strong>
+                    <p>10:00 am - 2:00 pm</p>
+                </div>
+            </div>
+            <p class="promo-text"><i class='bx bxs-offer'></i> ¡Pregunta por nuestras promociones!</p>
+        </div>
+
+        <div class="locations-wrapper">
+            <h3 class="city-header">Ciudad de México</h3>
+            <div class="locations-grid">
+                <div class="location-card glass-panel">
+                    <div class="loc-icon"><i class='bx bxs-map'></i></div>
+                    <h3>Sucursal Narvarte</h3>
+                    <p>Xola #1603<br>Narvarte poniente, Benito Juárez</p>
+                    <a href="tel:5532973178" class="contact-link"><i class='bx bxs-phone-call'></i> (55) 3297 3178</a>
+                </div>
+                <div class="location-card glass-panel">
+                    <div class="loc-icon"><i class='bx bxs-map'></i></div>
+                    <h3>Sucursal Eje 6 / La Viga</h3>
+                    <p>Dibujantes #142<br>El Triunfo, Iztapalapa</p>
+                    <a href="tel:5514350432" class="contact-link"><i class='bx bxs-phone-call'></i> (55) 1435 0432</a>
+                </div>
+            </div>
+
+            <h3 class="city-header mt-4">Acapulco</h3>
+            <div class="locations-grid">
+                <div class="location-card glass-panel">
+                    <div class="loc-icon"><i class='bx bxs-map'></i></div>
+                    <h3>Sucursal Acapulco</h3>
+                    <p>Próximamente más detalles...<br>Acapulco, Gro.</p>
+                    <a href="https://wa.me/525514350432?text=Hola,%20me%20gustaría%20agendar%20una%20cita%20en%20la%20sucursal%20de%20Acapulco" target="_blank" class="contact-link" style="color: #25d366; display: flex; align-items: center; gap: 0.5rem;"><i class='bx bxl-whatsapp' style="font-size: 1.2rem;"></i> WhatsApp: (55) 1435 0432</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="whatsapp-cta text-center">
+            <a href="https://wa.me/525532973178" target="_blank" class="btn-whatsapp">
+                <i class='bx bxl-whatsapp'></i> Contáctanos por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/images/logo.png" alt="Genosano Logo" class="footer-logo-img">
+            </div>
+            <p>Fisioterapia integral para una vida mejor.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/19b7GypXyz/?mibextid=wwXIfr" target="_blank" aria-label="Facebook Genosano"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://www.instagram.com/fisioterapia_genosano?igsi=dXN0YXl0N21saWVw" target="_blank" aria-label="Instagram Genosano"><i class='bx bxl-instagram'></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Grupo Genosano. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/525532973178?text=Hola,%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Genosano" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class='bx bxl-whatsapp'></i>
+    </a>
+
+    <script src="js/main.js?v=5"></script>
+</body>
+</html>
