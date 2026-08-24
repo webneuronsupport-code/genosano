@@ -127,4 +127,36 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Accordion Logic for Contact Locations
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const accordionItem = header.parentElement;
+            const accordionContent = header.nextElementSibling;
+            
+            // Close other items
+            document.querySelectorAll('.accordion-item').forEach(item => {
+                if (item !== accordionItem) {
+                    item.classList.remove('active');
+                    item.querySelector('.accordion-content').style.maxHeight = null;
+                }
+            });
+            
+            // Toggle current item
+            accordionItem.classList.toggle('active');
+            
+            if (accordionItem.classList.contains('active')) {
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+            } else {
+                accordionContent.style.maxHeight = null;
+            }
+        });
+    });
+    
+    // Open first accordion by default
+    if (accordionHeaders.length > 0) {
+        accordionHeaders[0].click();
+    }
 });
