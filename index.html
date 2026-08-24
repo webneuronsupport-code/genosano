@@ -11,8 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Boxicons for modern icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=18">
+    <link rel="stylesheet" href="css/style.css?v=19">
 </head>
 <body>
     <!-- Navbar -->
@@ -124,32 +126,67 @@
             <p>Tratamos una amplia variedad de condiciones para aliviar tu dolor y restaurar tu función física.</p>
         </div>
         
-        <div class="treatments-container">
-            <div class="treatments-images">
-                <div class="img-wrap glass-panel"><img src="assets/images/rehab.jpg" alt="Rehabilitación y Ejercicio"></div>
-            </div>
-            <div class="treatments-list">
-                <div class="treatments-pills">
-                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Dolor de espalda</div>
-                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Artritis</div>
-                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Hernias discales</div>
-                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Fracturas</div>
-                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Tendinitis</div>
-                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Escoliosis</div>
-                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Parálisis facial</div>
-                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Lesiones medulares</div>
-                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Dolor de ciática</div>
-                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Hemiplejía</div>
-                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Parálisis Cerebral</div>
-                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Síndrome de túnel del carpo</div>
-                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Post cirugía</div>
-                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Masaje descontracturante</div>
-                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Esguinces</div>
-                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Lesiones Deportivas</div>
-                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Neuropatías</div>
-                    <div class="treatment-pill"><i class='bx bx-pulse'></i> Lesiones de rodilla</div>
+        <div class="swiper treatments-swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="treatment-card-3d">
+                        <div class="card-icon"><i class='bx bx-body'></i></div>
+                        <h3>Columna y Espalda</h3>
+                        <ul class="treatment-list">
+                            <li><i class='bx bx-pulse'></i> Dolor de espalda</li>
+                            <li><i class='bx bx-pulse'></i> Hernias discales</li>
+                            <li><i class='bx bx-pulse'></i> Escoliosis</li>
+                            <li><i class='bx bx-pulse'></i> Dolor de ciática</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="treatment-card-3d">
+                        <div class="card-icon"><i class='bx bx-run'></i></div>
+                        <h3>Traumatología y Deporte</h3>
+                        <ul class="treatment-list">
+                            <li><i class='bx bx-pulse'></i> Lesiones Deportivas</li>
+                            <li><i class='bx bx-pulse'></i> Esguinces y Fracturas</li>
+                            <li><i class='bx bx-pulse'></i> Tendinitis</li>
+                            <li><i class='bx bx-pulse'></i> Lesiones de rodilla</li>
+                            <li><i class='bx bx-pulse'></i> Túnel del carpo</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div class="treatment-card-3d">
+                        <div class="card-icon"><i class='bx bx-brain'></i></div>
+                        <h3>Neurología</h3>
+                        <ul class="treatment-list">
+                            <li><i class='bx bx-pulse'></i> Parálisis facial</li>
+                            <li><i class='bx bx-pulse'></i> Lesiones medulares</li>
+                            <li><i class='bx bx-pulse'></i> Hemiplejía</li>
+                            <li><i class='bx bx-pulse'></i> Parálisis Cerebral</li>
+                            <li><i class='bx bx-pulse'></i> Neuropatías</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <div class="treatment-card-3d">
+                        <div class="card-icon"><i class='bx bx-plus-medical'></i></div>
+                        <h3>Articulaciones y Bienestar</h3>
+                        <ul class="treatment-list">
+                            <li><i class='bx bx-pulse'></i> Artritis</li>
+                            <li><i class='bx bx-pulse'></i> Post cirugía</li>
+                            <li><i class='bx bx-pulse'></i> Masaje descontracturante</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            <!-- Swiper Pagination -->
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
@@ -234,9 +271,12 @@
         <i class='bx bxl-whatsapp'></i>
     </a>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
     <!-- GSAP for animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="js/main.js?v=8"></script>
+    <script src="js/main.js?v=9"></script>
 </body>
 </html>
