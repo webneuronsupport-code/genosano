@@ -20,13 +20,15 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenuBtn.addEventListener('click', () => {
         navLinks.classList.toggle('active');
         
-        // Toggle icon
+        // Toggle icon and body scroll
         if (navLinks.classList.contains('active')) {
             menuIcon.classList.remove('bx-menu');
             menuIcon.classList.add('bx-x');
+            document.body.style.overflow = 'hidden';
         } else {
             menuIcon.classList.remove('bx-x');
             menuIcon.classList.add('bx-menu');
+            document.body.style.overflow = '';
         }
     });
 
@@ -37,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinks.classList.remove('active');
             menuIcon.classList.remove('bx-x');
             menuIcon.classList.add('bx-menu');
+            document.body.style.overflow = '';
         });
     });
 
