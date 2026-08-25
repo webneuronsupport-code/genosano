@@ -427,8 +427,6 @@ ul {
 /* Section Common */
 .section {
     padding: var(--section-padding);
-    max-width: 1440px;
-    margin: 0 auto;
     padding-left: 5%;
     padding-right: 5%;
 }
@@ -1245,6 +1243,13 @@ footer {
         padding: 0.6rem 1.2rem;
         font-size: 0.9rem;
     }
+}
+
+/* Container */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 /* Contact Form Section */
