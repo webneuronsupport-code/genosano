@@ -826,126 +826,133 @@ ul {
     }
 }
 
-/* Locations Cards Grid */
-.locations-cards-grid {
+/* Locations Map Grid */
+.map-section-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1.2fr 1fr;
     gap: 2rem;
     margin-top: 3rem;
-}
-
-.location-card {
     background: #ffffff;
-    border-radius: 20px;
-    padding: 2.5rem;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    position: relative;
+    border-radius: 24px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.05);
     overflow: hidden;
-    border: 1px solid rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
-.location-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
+.map-container {
     width: 100%;
-    height: 6px;
-    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    min-height: 500px;
 }
 
-.location-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
-.loc-card-header {
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.loc-card-badge {
-    display: inline-block;
-    background: rgba(49, 151, 149, 0.1);
-    color: var(--color-secondary);
-    padding: 0.4rem 1rem;
-    border-radius: 30px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-}
-
-.loc-card-header h3 {
-    font-size: 1.6rem;
-    color: var(--color-primary);
-    font-weight: 700;
-    margin: 0;
-}
-
-.loc-card-body {
-    flex-grow: 1;
+.locations-list {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin-bottom: 2.5rem;
+    padding: 2rem 2rem 2rem 0;
+    max-height: 600px;
+    overflow-y: auto;
 }
 
-.loc-detail {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
+/* Custom Scrollbar for list */
+.locations-list::-webkit-scrollbar {
+    width: 6px;
+}
+.locations-list::-webkit-scrollbar-track {
+    background: var(--bg-light);
+    border-radius: 10px;
+}
+.locations-list::-webkit-scrollbar-thumb {
+    background: rgba(49, 151, 149, 0.3);
+    border-radius: 10px;
 }
 
-.loc-detail i {
-    font-size: 1.5rem;
-    color: var(--color-accent);
-    margin-top: 0.2rem;
+.loc-list-item {
+    padding: 1.5rem;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
-.loc-detail p {
-    margin: 0;
-    font-size: 1rem;
-    color: var(--text-main);
-    line-height: 1.6;
+.loc-list-item:hover {
+    background: var(--bg-alt);
 }
 
-.loc-detail p strong {
-    color: var(--color-primary);
-    display: block;
-    font-size: 1.1rem;
-    margin-bottom: 0.3rem;
+.loc-list-item.active {
+    background: rgba(49, 151, 149, 0.05);
+    border-color: rgba(49, 151, 149, 0.2);
 }
 
-.btn-whatsapp-card {
+.loc-list-header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    width: 100%;
-    padding: 1rem;
-    background: #25d366;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.loc-list-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--color-primary);
+}
+
+.loc-badge {
+    background: var(--color-secondary);
     color: white;
-    border-radius: 12px;
-    text-decoration: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.loc-list-item > p {
+    color: var(--text-main);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    line-height: 1.5;
+}
+
+.loc-list-item > p i {
+    color: var(--color-accent);
+    font-size: 1.3rem;
+    margin-top: 0.1rem;
+}
+
+.loc-list-actions {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding-left: 1.8rem;
+}
+
+.loc-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
     font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
+    color: var(--text-main);
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 0.95rem;
 }
 
-.btn-whatsapp-card:hover {
-    background: #128c7e;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+.loc-link:hover {
+    color: var(--color-primary);
 }
 
-.btn-whatsapp-card i {
-    font-size: 1.4rem;
+.loc-link.text-whatsapp {
+    color: #25d366;
+}
+.loc-link.text-whatsapp:hover {
+    color: #128c7e;
 }
 .text-center {
     text-align: center;
@@ -1089,8 +1096,16 @@ footer {
 }
 
 @media (max-width: 1024px) {
-    .locations-cards-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .map-section-grid {
+        grid-template-columns: 1fr;
+    }
+    .map-container {
+        min-height: 350px;
+    }
+    .locations-list {
+        padding: 1.5rem;
+        max-height: none;
+        overflow-y: visible;
     }
 }
 
@@ -1167,8 +1182,7 @@ footer {
 
 
     
-    .schedule-grid,
-    .locations-cards-grid {
+    .schedule-grid {
         grid-template-columns: 1fr;
     }
     

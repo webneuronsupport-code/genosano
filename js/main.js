@@ -102,46 +102,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    // Horizontal Accordion Logic for Treatments
+    // Setup treatment accordion listeners
     const hCards = document.querySelectorAll('.h-card');
-    hCards.forEach(card => {
-        card.addEventListener('click', () => {
-            // Remove active class from all
-            hCards.forEach(c => c.classList.remove('active'));
-            // Add active class to clicked card
-            card.classList.add('active');
-        });
-    });
-
-    // Accordion Logic for Contact Locations
-    const accordionHeaders = document.querySelectorAll('.accordion-header');
-    
-    accordionHeaders.forEach(header => {
-        header.addEventListener('click', () => {
-            const accordionItem = header.parentElement;
-            const accordionContent = header.nextElementSibling;
-            
-            // Close other items
-            document.querySelectorAll('.accordion-item').forEach(item => {
-                if (item !== accordionItem) {
-                    item.classList.remove('active');
-                    item.querySelector('.accordion-content').style.maxHeight = null;
-                }
+    if (hCards.length > 0) {
+        hCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                // Remove active class from all
+                hCards.forEach(c => c.classList.remove('active'));
+                // Add active class to hovered
+                this.classList.add('active');
             });
-            
-            // Toggle current item
-            accordionItem.classList.toggle('active');
-            
-            if (accordionItem.classList.contains('active')) {
-                accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
-            } else {
-                accordionContent.style.maxHeight = null;
-            }
         });
-    });
-    
-    // Open first accordion by default
-    if (accordionHeaders.length > 0) {
-        accordionHeaders[0].click();
     }
+
 });
+
+// Map switching function for Contacto section
+window.changeMap = function(query, element) {
+    const mapFrame = document.getElementById('branch-map');
+    if (mapFrame) {
+        mapFrame.src = `https://maps.google.com/maps?q=${query}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
+    }
+    
+    // Remove active class from all loc-list-item
+    document.querySelectorAll('.loc-list-item').forEach(el => el.classList.remove('active'));
+    
+    // Add active to clicked item
+    if (element) {
+        element.classList.add('active');
+    }
+};
