@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     mobileMenuBtn.addEventListener('click', () => {
         navLinks.classList.toggle('active');
+        document.body.classList.toggle('nav-active');
         
         // Toggle icon and body scroll
         if (navLinks.classList.contains('active')) {
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     links.forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
+            document.body.classList.remove('nav-active');
             menuIcon.classList.remove('bx-x');
             menuIcon.classList.add('bx-menu');
             document.body.style.overflow = '';
